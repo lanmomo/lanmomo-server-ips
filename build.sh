@@ -18,17 +18,18 @@ cat "$SRC/ips.txt" | while read line; do
     desc=$(echo "$line" | cut -f 3)
     ip=$(echo "$line" | cut -f 4)
     mac=$(echo "$line" | cut -f 5)
+    domain="${host}.lan"
 
     # Build lanmomo.ca
-    echo "${host}.lan 86400 IN A ${ip}" >> $BUILD/lanmomo.ca
+    echo "$domain 86400 IN A $ip" >> $BUILD/lanmomo.ca
 
     # Build dhcp.xml
     cat >> $BUILD/dhcp.xml << EOF
 			<staticmap>
-				<mac>${mac}</mac>
-				<ipaddr>${ip}</ipaddr>
-				<hostname>${host}</hostname>
-				<descr>${desc}</descr>
+				<mac>$mac</mac>
+				<ipaddr>$ip</ipaddr>
+				<hostname>$host</hostname>
+				<descr>$desc</descr>
 				<filename/>
 				<rootpath/>
 				<defaultleasetime/>
