@@ -3,7 +3,7 @@ quanta	none	Switch 48ports (pgr)	172.16.16.11	00:26:9E:1E:A1:25
 woven	none	Switch 48ports (jd)	172.16.16.12	00:1E:68:0F:C3:44
 explain	none	Switch 48ports (ac)	172.16.16.13	00:26:9E:1E:9E:12
 kikazaru	none	Host	172.16.16.21	00:12:55:02:6A:08
-elvis	none	Host	172.16.16.22	62:70:02:14:43:7D
+elvis	none	Host	172.16.16.22	64:70:02:14:43:7D
 css1	medium	css	172.16.16.129	00:12:56:B6:6A:F9
 css2	medium	css	172.16.16.130	00:12:56:07:D0:2F
 css3	medium	css	172.16.16.131	00:12:56:A9:E2:46
