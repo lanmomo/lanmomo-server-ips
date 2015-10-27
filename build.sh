@@ -10,7 +10,37 @@ rm -rf "$BUILD"
 # Prepare build
 mkdir "$BUILD"
 
+DHCP="$BUILD/dhcpd.conf"
+
 # Build
+
+cat > "$DHCP" << EOF
+#
+# Configuration file for ISC dhcpd for LAN Montmorency 2015-11
+#
+#
+
+ddns-update-style none;
+
+option domain-name "lanmomo.org";
+option domain-name-servers 172.16.16.1;
+
+default-lease-time 6000;
+max-lease-time 72000;
+
+authoritative;
+
+log-facility local7;
+
+# Main DHCP pool
+
+subnet 172.16.16.0 netmask 255.255.252.0 {
+   range 172.16.18.1 172.16.19.254;
+   option routers 172.16.16.1;
+}
+
+EOF
+
 cat "$SRC/ips.txt" | while read line; do
 
     # Variables
@@ -20,27 +50,17 @@ cat "$SRC/ips.txt" | while read line; do
     mac=$(echo "$line" | cut -f 5)
     domain="${host}.lan"
 
-    # Build lanmomo.ca
-    echo "$domain 86400 IN A $ip" >> $BUILD/lanmomo.ca
+    # Build lanmomo.org
+    echo "$domain 86400 IN A $ip" >> "$BUILD/lanmomo.org"
 
-    # Build dhcp.xml
-    cat >> $BUILD/dhcp.xml << EOF
-			<staticmap>
-				<mac>$mac</mac>
-				<ipaddr>$ip</ipaddr>
-				<hostname>$host</hostname>
-				<descr>$desc</descr>
-				<filename/>
-				<rootpath/>
-				<defaultleasetime/>
-				<maxleasetime/>
-				<gateway/>
-				<domain/>
-				<domainsearchlist/>
-				<ddnsdomain/>
-				<tftp/>
-				<ldap/>
-			</staticmap>
+
+    cat >> "$DHCP" << EOF
+
+host $host {
+    hardware ethernet $mac;
+    fixed-address $ip;
+}
+
 EOF
 
 done
