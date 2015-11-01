@@ -44,14 +44,13 @@ EOF
 cat "$SRC/ips.txt" | while read line; do
 
     # Variables
-    host=$(echo "$line" | cut -f 1)
-    desc=$(echo "$line" | cut -f 3)
-    ip=$(echo "$line" | cut -f 4)
-    mac=$(echo "$line" | cut -f 5)
-    domain="${host}.lan"
+    host=$(echo "$line" | cut -f 1 -d ';')
+    desc=$(echo "$line" | cut -f 3 -d ';')
+    ip=$(echo "$line" | cut -f 4 -d ';')
+    mac=$(echo "$line" | cut -f 5 -d ';')
 
     # Build lanmomo.org
-    echo "$domain 86400 IN A $ip" >> "$BUILD/lanmomo.org"
+    echo "$host 86400 IN A $ip" >> "$BUILD/lanmomo.org"
 
 
     cat >> "$DHCP" << EOF

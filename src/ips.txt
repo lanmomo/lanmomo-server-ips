@@ -1,51 +1,7 @@
-pfsense	none	Gateway (router)	172.16.16.1	00:0D:B9:35:B8:15
-quanta	none	Switch 48ports (pgr)	172.16.16.11	00:26:9E:1E:A1:25
-woven	none	Switch 48ports (jd)	172.16.16.12	00:1E:68:0F:C3:44
-explain	none	Switch 48ports (ac)	172.16.16.13	00:26:9E:1E:9E:12
-kikazaru	none	Host	172.16.16.21	00:12:55:02:6A:08
-elvis	none	Host	172.16.16.22	64:70:02:14:43:7D
-css1	medium	css	172.16.16.129	00:12:56:B6:6A:F9
-css2	medium	css	172.16.16.130	00:12:56:07:D0:2F
-css3	medium	css	172.16.16.131	00:12:56:A9:E2:46
-css4	medium	css	172.16.16.132	00:12:56:F9:0A:BE
-csgo1	large	csgo	172.16.16.133	00:12:56:2C:92:3B
-csgo2	large	csgo	172.16.16.134	00:12:56:96:45:0A
-csgo-comp1	large	csgo	172.16.16.135	00:12:56:D0:DB:67
-csgo-race	large	csgo	172.16.16.136	00:12:56:CD:F6:35
-ttt1	med-large	ttt	172.16.16.137	00:12:56:6F:C2:5C
-ttt2	med-large	ttt	172.16.16.138	00:12:56:CB:92:70
-ttt3	med-large	ttt	172.16.16.139	00:12:56:D7:45:95
-ttt4	med-large	ttt	172.16.16.140	00:12:56:91:21:27
-ph1	medium	ph	172.16.16.141	00:12:56:C2:49:AB
-ph2	medium	ph	172.16.16.142	00:12:56:18:39:34
-ph3	medium	ph	172.16.16.143	00:12:56:0B:56:8E
-ph4	medium	ph	172.16.16.144	00:12:56:A2:E6:45
-mc1	huge	mc	172.16.16.144	00:12:56:93:6B:17
-mc2	huge	mc	172.16.16.146	00:12:56:E3:A2:C9
-mc3	huge	mc	172.16.16.149	00:12:56:01:5E:BE
-mc4	huge	mc	172.16.16.150	00:12:56:AB:61:C2
-tf2-1	medium	tf2	172.16.16.151	00:12:56:67:E4:4F
-tf2-2	medium	tf2	172.16.16.152	00:12:56:71:87:15
-tf2-3	medium	tf2	172.16.16.153	00:12:56:AC:B7:03
-tf2-4	medium	tf2	172.16.16.154	00:12:56:CE:FC:DC
-mvm1	medium	mvm	172.16.16.155	00:12:56:9F:1E:64
-mvm2	medium	mvm	172.16.16.156	00:12:56:BC:4C:9E
-mvm3	medium	mvm	172.16.16.157	00:12:56:D1:9C:69
-mvm4	medium	mvm	172.16.16.158	00:12:56:48:F4:A2
-mvm5	medium	mvm	172.16.16.159	00:12:56:76:5F:A0
-mvm6	medium	mvm	172.16.16.160	00:12:56:5F:C5:9D
-tmnf1	small	tmnf	172.16.16.161	00:12:56:F3:78:8A
-tmnf2	small	tmnf	172.16.16.162	00:12:56:5B:D4:51
-ut2004-1	med-large	ut2004	172.16.16.163	00:12:56:DB:E8:40
-ut2004-2	med-large	ut2004	172.16.16.164	00:12:56:CF:1B:99
-ut2004-3	med-large	ut2004	172.16.16.165	00:12:56:AD:00:9E
-ut2004-4	med-large	ut2004	172.16.16.166	00:12:56:50:43:C6
-kf1	medium	kf	172.16.16.167	00:12:56:88:2E:D5
-kf2	medium	kf	172.16.16.168	00:12:56:86:D4:DC
-kf3	medium	kf	172.16.16.169	00:12:56:BB:80:A0
-kf4	medium	kf	172.16.16.170	00:12:56:4D:8E:02
-kf5	medium	kf	172.16.16.171	00:12:56:9A:BE:FC
-kf6	medium	kf	172.16.16.172	00:12:56:6B:D0:84
-csgo-comp2	large	csgo	172.16.16.173	00:12:56:DD:FE:BE
-mumble	tiny	mumble	172.16.16.180	00:12:56:E9:40:37
-fastdl	tiny	fastdl	172.16.16.181	00:12:56:A3:C6:77
+kikazaru;none;Gateway (eth3);172.16.16.1;00:15:17:37:95:ab
+woven;none;Switch 48ports (jd);172.16.16.11;00:1E:68:0F:C3:44
+quanta1;none;Switch 48ports (pgr);172.16.16.12;00:26:9E:1E:A1:25
+quanta2;none;Switch 48ports (nadeau);172.16.16.13;00:26:9e:1e:a6:d1
+quanta3;none;Switch 48ports (dom);172.16.16.14;00:23:8b:03:35:50
+kikazaru;none;Host - infiniband (eth5);172.16.16.21;00:12:55:02:6A:08
+elvis;none;Host;172.16.16.22;64:70:02:14:43:7D
